@@ -114,7 +114,7 @@ class HubConnection {
     _resetKeepAliveInterval();
 
     // Wait for the handshake to complete before marking connection as connected
-    await _handshakeCompleter.future;
+    await _handshakeCompleter?.future;
     _connectionState = HubConnectionState.Connected;
   }
 
